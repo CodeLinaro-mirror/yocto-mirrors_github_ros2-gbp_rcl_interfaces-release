@@ -2,16 +2,74 @@
 Changelog for package rosgraph_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.2.3 (2026-05-13)
+2.5.1 (2026-07-15)
 ------------------
-* Actually build the new graph description messages (`#192 <https://github.com/ros2/rcl_interfaces/issues/192>`_) (`#195 <https://github.com/ros2/rcl_interfaces/issues/195>`_)
-* Add Graph description messages to rosgraph_msgs (`#188 <https://github.com/ros2/rcl_interfaces/issues/188>`_) (`#189 <https://github.com/ros2/rcl_interfaces/issues/189>`_)
-* Contributors: mergify[bot]
+* use C++ 20 in default. (`#200 <https://github.com/ros2/rcl_interfaces//issues/200>`_)
+* Contributors: Tomoya Fujita
 
-1.2.2 (2025-07-16)
+2.5.0 (2026-05-07)
+------------------
+* Actually build the new graph description messages (`#192 <https://github.com/ros2/rcl_interfaces/issues/192>`_)
+* Contributors: Emerson Knapp
+
+2.4.4 (2026-04-14)
 ------------------
 
-1.2.1 (2022-11-07)
+* Add Graph description messages to ``rosgraph_msgs`` (`#188 <https://github.com/ros2/rcl_interfaces/issues/188>`_)
+
+* Contributors: Emerson Knapp
+
+2.4.3 (2026-02-09)
+------------------
+
+2.4.2 (2025-07-29)
+------------------
+* Fix cmake deprecation (`#180 <https://github.com/ros2/rcl_interfaces/issues/180>`_)
+* Contributors: mosfet80
+
+2.4.1 (2025-07-01)
+------------------
+
+2.4.0 (2025-04-25)
+------------------
+
+2.3.0 (2025-04-18)
+------------------
+
+2.2.0 (2024-06-25)
+------------------
+
+2.1.0 (2024-04-26)
+------------------
+
+2.0.2 (2024-04-16)
+------------------
+
+2.0.1 (2023-10-04)
+------------------
+
+2.0.0 (2023-09-07)
+------------------
+
+1.7.0 (2023-04-27)
+------------------
+
+1.6.0 (2023-04-18)
+------------------
+
+1.5.0 (2023-04-11)
+------------------
+
+1.4.0 (2023-02-13)
+------------------
+* Update common_interfaces to C++17. (`#215 <https://github.com/ros2/rcl_interfaces/issues/215>`_) (`#151 <https://github.com/ros2/rcl_interfaces/issues/151>`_)
+* [rolling] Update maintainers - 2022-11-07 (`#150 <https://github.com/ros2/rcl_interfaces/issues/150>`_)
+* Contributors: Audrow Nash, Chris Lalancette
+
+1.3.1 (2022-09-09)
+------------------
+
+1.3.0 (2022-04-29)
 ------------------
 
 1.2.0 (2022-03-01)

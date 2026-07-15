@@ -2,13 +2,83 @@
 Changelog for package test_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.2.3 (2026-05-13)
+2.5.1 (2026-07-15)
+------------------
+* use C++ 20 in default. (`#200 <https://github.com/ros2/rcl_interfaces//issues/200>`_)
+* fix(test_msgs): add missing find_package for ament_cmake_mypy (`#197 <https://github.com/ros2/rcl_interfaces//issues/197>`_)
+* Contributors: Esteve Fernandez, Tomoya Fujita
+
+2.5.0 (2026-05-07)
 ------------------
 
-1.2.2 (2025-07-16)
+2.4.4 (2026-04-14)
 ------------------
 
-1.2.1 (2022-11-07)
+* Add ``ament_cmake_mypy`` to ``test_msgs`` (`#187 <https://github.com/ros2/rcl_interfaces/issues/187>`_)
+
+* Contributors: Michael Carlstrom
+
+2.4.3 (2026-02-09)
+------------------
+
+2.4.2 (2025-07-29)
+------------------
+* Fix cmake deprecation (`#180 <https://github.com/ros2/rcl_interfaces/issues/180>`_)
+* Contributors: mosfet80
+
+2.4.1 (2025-07-01)
+------------------
+
+2.4.0 (2025-04-25)
+------------------
+
+2.3.0 (2025-04-18)
+------------------
+* Added test messages with keys (`#173 <https://github.com/ros2/rcl_interfaces/issues/173>`_)
+* Contributors: Francisco Gallego Salido
+
+2.2.0 (2024-06-25)
+------------------
+
+2.1.0 (2024-04-26)
+------------------
+
+2.0.2 (2024-04-16)
+------------------
+* Increase the timeout for the test_msgs rosidl_generated_cpp cpplint. (`#163 <https://github.com/ros2/rcl_interfaces/issues/163>`_)
+  This should make it much more likely to succeed on Windows.
+* Contributors: Chris Lalancette
+
+2.0.1 (2023-10-04)
+------------------
+* Fix for invalid conversion from const char8_t* to char for C++20 (`#160 <https://github.com/ros2/rcl_interfaces/issues/160>`_)
+* Contributors: AiVerisimilitude
+
+2.0.0 (2023-09-07)
+------------------
+
+1.7.0 (2023-04-27)
+------------------
+
+1.6.0 (2023-04-18)
+------------------
+
+1.5.0 (2023-04-11)
+------------------
+
+1.4.0 (2023-02-13)
+------------------
+* Update common_interfaces to C++17. (`#215 <https://github.com/ros2/rcl_interfaces/issues/215>`_) (`#151 <https://github.com/ros2/rcl_interfaces/issues/151>`_)
+* [rolling] Update maintainers - 2022-11-07 (`#150 <https://github.com/ros2/rcl_interfaces/issues/150>`_)
+* Contributors: Audrow Nash, Chris Lalancette
+
+1.3.1 (2022-09-09)
+------------------
+* Depend on rosidl_core_generators for packages required by actions (`#144 <https://github.com/ros2/rcl_interfaces/issues/144>`_)
+* Make the functions in the header static inline (`#140 <https://github.com/ros2/rcl_interfaces/issues/140>`_)
+* Contributors: Chris Lalancette, Jacob Perron
+
+1.3.0 (2022-04-29)
 ------------------
 
 1.2.0 (2022-03-01)

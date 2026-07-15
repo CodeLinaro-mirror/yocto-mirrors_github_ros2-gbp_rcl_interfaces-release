@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 
 project(test_msgs)
 
@@ -7,9 +7,10 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 11)
 endif()
 
-# Default to C++14
+# Default to C++20
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 20)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -27,6 +28,10 @@ rosidl_generate_interfaces(test_msgs
   ${test_interface_files_ACTION_FILES}
   ${test_interface_files_IDL_FILES}
   "msg/Builtins.msg"
+  "msg/KeyedLong.idl"
+  "msg/KeyedString.idl"
+  "msg/NonKeyedWithNestedKey.idl"
+  "msg/ComplexNestedKey.idl"
   "action/NestedMessage.action"
   DEPENDENCIES builtin_interfaces
   ADD_LINTER_TESTS
@@ -42,7 +47,13 @@ ament_export_targets(export_${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
+  list(APPEND AMENT_LINT_AUTO_EXCLUDE ament_cmake_mypy)
   ament_lint_auto_find_test_dependencies()
+
+  find_package(ament_cmake_mypy REQUIRED)
+  ament_mypy(
+    AMENT_STRICT
+  )
 
   rosidl_get_typesupport_target(c_typesupport_target "test_msgs" "rosidl_typesupport_c")
   rosidl_get_typesupport_target(cpp_typesupport_target "test_msgs" "rosidl_typesupport_cpp")
@@ -56,6 +67,10 @@ if(BUILD_TESTING)
     test/test_cpp_type_support.cpp)
   target_link_libraries(test_action_typesupport_cpp_builds
     "${cpp_typesupport_target}")
+
+  if(TEST cpplint_rosidl_generated_cpp)
+    set_tests_properties(cpplint_rosidl_generated_cpp PROPERTIES TIMEOUT 180)
+  endif()
 endif()
 
 if(DEFINED PYTHON_INSTALL_DIR)
